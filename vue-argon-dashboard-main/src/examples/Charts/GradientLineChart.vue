@@ -25,7 +25,7 @@ export default {
   props: {
     title: {
       type: String,
-      default: "Sales overview",
+      default: "老年人需求占比",
     },
     detail1: {
       type: String,
@@ -48,10 +48,10 @@ export default {
     new Chart(ctx1, {
       type: "line",
       data: {
-        labels: ["Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+        labels: ["家居", "代购", "医护", "学习", "陪伴", "出行", "个性化需求"],
         datasets: [
           {
-            label: "Mobile apps",
+            label: "今日需求量",
             tension: 0.4,
             borderWidth: 0,
             pointRadius: 0,
@@ -60,7 +60,7 @@ export default {
             // eslint-disable-next-line no-dupe-keys
             borderWidth: 3,
             fill: true,
-            data: [50, 40, 300, 220, 500, 250, 400, 230, 500],
+            data: [50, 40, 300, 220, 500, 250, 400],
             maxBarThickness: 6,
           },
         ],

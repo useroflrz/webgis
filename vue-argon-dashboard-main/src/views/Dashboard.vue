@@ -4,49 +4,24 @@
       <div class="col-lg-12">
         <div class="row">
           <div class="col-lg-3 col-md-6 col-12">
-            <card
-              :title="stats.money.title"
-              :value="stats.money.value"
-              :percentage="stats.money.percentage"
-              :iconClass="stats.money.iconClass"
-              :iconBackground="stats.money.iconBackground"
-              :detail="stats.money.detail"
-              directionReverse
-            ></card>
+            <card :title="stats.money.title" :value="stats.money.value" :percentage="stats.money.percentage"
+              :iconClass="stats.money.iconClass" :iconBackground="stats.money.iconBackground" :detail="stats.money.detail"
+              directionReverse></card>
           </div>
           <div class="col-lg-3 col-md-6 col-12">
-            <card
-              :title="stats.users.title"
-              :value="stats.users.value"
-              :percentage="stats.users.percentage"
-              :iconClass="stats.users.iconClass"
-              :iconBackground="stats.users.iconBackground"
-              :detail="stats.users.detail"
-              directionReverse
-            ></card>
+            <card :title="stats.users.title" :value="stats.users.value" :percentage="stats.users.percentage"
+              :iconClass="stats.users.iconClass" :iconBackground="stats.users.iconBackground" :detail="stats.users.detail"
+              directionReverse></card>
           </div>
           <div class="col-lg-3 col-md-6 col-12">
-            <card
-              :title="stats.clients.title"
-              :value="stats.clients.value"
-              :percentage="stats.clients.percentage"
-              :iconClass="stats.clients.iconClass"
-              :iconBackground="stats.clients.iconBackground"
-              :percentageColor="stats.clients.percentageColor"
-              :detail="stats.clients.detail"
-              directionReverse
-            ></card>
+            <card :title="stats.clients.title" :value="stats.clients.value" :percentage="stats.clients.percentage"
+              :iconClass="stats.clients.iconClass" :iconBackground="stats.clients.iconBackground"
+              :percentageColor="stats.clients.percentageColor" :detail="stats.clients.detail" directionReverse></card>
           </div>
           <div class="col-lg-3 col-md-6 col-12">
-            <card
-              :title="stats.sales.title"
-              :value="stats.sales.value"
-              :percentage="stats.sales.percentage"
-              :iconClass="stats.sales.iconClass"
-              :iconBackground="stats.sales.iconBackground"
-              :detail="stats.sales.detail"
-              directionReverse
-            ></card>
+            <card :title="stats.sales.title" :value="stats.sales.value" :percentage="stats.sales.percentage"
+              :iconClass="stats.sales.iconClass" :iconBackground="stats.sales.iconBackground" :detail="stats.sales.detail"
+              directionReverse></card>
           </div>
         </div>
         <div class="row">
@@ -132,37 +107,37 @@ export default {
     return {
       stats: {
         money: {
-          title: "Today's Money",
-          value: "$53,000",
+          title: "新增爱心用户数",
+          value: "53,000",
           percentage: "+55%",
           iconClass: "ni ni-money-coins",
-          detail: "since yesterday",
+          detail: "自昨天以来",
           iconBackground: "bg-gradient-primary",
         },
         users: {
-          title: "Today's Users",
+          title: "新增爱心用户数",
           value: "2,300",
           percentage: "+3%",
           iconClass: "ni ni-world",
           iconBackground: "bg-gradient-danger",
-          detail: "since last week",
+          detail: "自上周以来",
         },
         clients: {
-          title: "New Clients",
+          title: "用户日活跃数",
           value: "+3,462",
           percentage: "-2%",
           iconClass: "ni ni-paper-diploma",
           percentageColor: "text-danger",
           iconBackground: "bg-gradient-success",
-          detail: "since last quarter",
+          detail: "自上个季度以来",
         },
         sales: {
-          title: "Sales",
-          value: "$103,430",
+          title: "累计服务时长",
+          value: "103,430",
           percentage: "+5%",
           iconClass: "ni ni-cart",
           iconBackground: "bg-gradient-warning",
-          detail: "than last month",
+          detail: "较上个月",
         },
       },
       sales: {
