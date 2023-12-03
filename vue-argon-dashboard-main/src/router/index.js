@@ -16,12 +16,12 @@ const routes = [
   },
   {
     path: "/dashboard-default",
-    name: "Dashboard",
+    name: "首页",
     component: Dashboard,
   },
   {
     path: "/tables",
-    name: "Tables",
+    name: "管理员群组",
     component: Tables,
   },
   {

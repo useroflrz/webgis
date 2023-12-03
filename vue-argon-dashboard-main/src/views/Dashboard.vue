@@ -40,7 +40,7 @@
             <div class="card">
               <div class="p-3 pb-0 card-header">
                 <div class="d-flex justify-content-between">
-                  <h6 class="mb-2">Sales by Country</h6>
+                  <h6 class="mb-2">城市服务贡献量</h6>
                 </div>
               </div>
               <div class="table-responsive">
@@ -50,29 +50,29 @@
                       <td class="w-30">
                         <div class="px-2 py-1 d-flex align-items-center">
                           <div>
-                            <img :src="sale.flag" alt="Country flag" />
+
                           </div>
                           <div class="ms-4">
-                            <p class="mb-0 text-xs font-weight-bold">Country:</p>
+                            <p class="mb-0 text-xs font-weight-bold">城市:</p>
                             <h6 class="mb-0 text-sm">{{ sale.country }}</h6>
                           </div>
                         </div>
                       </td>
                       <td>
                         <div class="text-center">
-                          <p class="mb-0 text-xs font-weight-bold">Sales:</p>
+                          <p class="mb-0 text-xs font-weight-bold">服务时长:</p>
                           <h6 class="mb-0 text-sm">{{ sale.sales }}</h6>
                         </div>
                       </td>
                       <td>
                         <div class="text-center">
-                          <p class="mb-0 text-xs font-weight-bold">Value:</p>
+                          <p class="mb-0 text-xs font-weight-bold">服务人数:</p>
                           <h6 class="mb-0 text-sm">{{ sale.value }}</h6>
                         </div>
                       </td>
                       <td class="text-sm align-middle">
                         <div class="text-center col">
-                          <p class="mb-0 text-xs font-weight-bold">Bounce:</p>
+                          <p class="mb-0 text-xs font-weight-bold">同比增长:</p>
                           <h6 class="mb-0 text-sm">{{ sale.bounce }}</h6>
                         </div>
                       </td>
@@ -96,10 +96,6 @@ import GradientLineChart from "@/examples/Charts/GradientLineChart.vue";
 import Carousel from "./components/Carousel.vue";
 import CategoriesCard from "./components/CategoriesCard.vue";
 
-import US from "@/assets/img/icons/flags/US.png";
-import DE from "@/assets/img/icons/flags/DE.png";
-import GB from "@/assets/img/icons/flags/GB.png";
-import BR from "@/assets/img/icons/flags/BR.png";
 
 export default {
   name: "dashboard-default",
@@ -142,32 +138,28 @@ export default {
       },
       sales: {
         us: {
-          country: "United States",
+          country: "深圳",
           sales: 2500,
-          value: "$230,900",
+          value: "230,900",
           bounce: "29.9%",
-          flag: US,
         },
         germany: {
-          country: "Germany",
+          country: "蚌埠",
           sales: "3.900",
-          value: "$440,000",
+          value: "440,000",
           bounce: "40.22%",
-          flag: DE,
         },
         britain: {
-          country: "Great Britain",
+          country: "湛江",
           sales: "1.400",
-          value: "$190,700",
+          value: "190,700",
           bounce: "23.44%",
-          flag: GB,
         },
         brasil: {
-          country: "Brasil",
+          country: "惠州",
           sales: "562",
-          value: "$143,960",
+          value: "143,960",
           bounce: "32.14%",
-          flag: BR,
         },
       },
     };

@@ -47,7 +47,7 @@
               <span v-if="this.$store.state.isRTL" class="d-sm-inline d-none"
                 >يسجل دخول</span
               >
-              <span v-else class="d-sm-inline d-none">Sign In</span>
+              <span v-else class="d-sm-inline d-none">登录</span>
             </router-link>
           </li>
           <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
@@ -101,12 +101,12 @@
                     </div>
                     <div class="d-flex flex-column justify-content-center">
                       <h6 class="mb-1 text-sm font-weight-normal">
-                        <span class="font-weight-bold">New message</span> from
-                        Laur
+                        <span class="font-weight-bold">未读信息</span> 
+                        来自 LHM
                       </h6>
                       <p class="mb-0 text-xs text-secondary">
                         <i class="fa fa-clock me-1"></i>
-                        13 minutes ago
+                        13 分钟前
                       </p>
                     </div>
                   </div>
@@ -124,12 +124,12 @@
                     </div>
                     <div class="d-flex flex-column justify-content-center">
                       <h6 class="mb-1 text-sm font-weight-normal">
-                        <span class="font-weight-bold">New album</span> by
-                        Travis Scott
+                        <span class="font-weight-bold">未读信息</span> 
+                        来自 YZN
                       </h6>
                       <p class="mb-0 text-xs text-secondary">
                         <i class="fa fa-clock me-1"></i>
-                        1 day
+                        一天前
                       </p>
                     </div>
                   </div>
@@ -180,11 +180,11 @@
                     </div>
                     <div class="d-flex flex-column justify-content-center">
                       <h6 class="mb-1 text-sm font-weight-normal">
-                        Payment successfully completed
+                        服务完成提醒
                       </h6>
                       <p class="mb-0 text-xs text-secondary">
                         <i class="fa fa-clock me-1"></i>
-                        2 days
+                        两天前
                       </p>
                     </div>
                   </div>
