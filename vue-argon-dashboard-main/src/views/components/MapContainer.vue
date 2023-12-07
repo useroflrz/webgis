@@ -32,7 +32,7 @@ export default {
             })
                 .then((AMap) => {
 
-                        this.map = new AMap.Map("container", {
+                    this.map = new AMap.Map("container", {
                         // 设置地图容器id
                         viewMode: "3D", // 是否为3D地图模式
                         zooms: [3, 10],
@@ -43,15 +43,15 @@ export default {
                         showLabel: false,
 
                     });
-                    this.loca = new window.Loca.Container({
+                    this.loca = new Loca.Container({
                         map: this.map
                     });
 
-                    var geo = new window.Loca.GeoJSONSource({
+                    var geo = new Loca.GeoJSONSource({
                         url: 'https://a.amap.com/Loca/static/loca-v2/demos/mock_data/traffic.json',
                     });
 
-                    var heatmap = new window.Loca.HeatMapLayer({
+                    var heatmap = new Loca.HeatMapLayer({
                         // loca,
                         zIndex: 10,
                         opacity: 1,
@@ -76,8 +76,7 @@ export default {
                             0.7: '#FAA53F',
                             1: '#D04343',
                         },
-                        value: function (index, feature) 
-                        {
+                        value: function (index, feature) {
                             // return feature.properties.avg;
                             var value = feature.properties.mom.slice(0, -1);
                             return value + 10 * Math.random();
@@ -121,17 +120,18 @@ export default {
                                 position: feat.lnglat,
                                 anchor: 'bottom-center',
                                 content:
-                                '<div style="margin-bottom: 15px; border:1px solid #fff; border-radius: 4px;color: #fff; width: 150px; text-align: center;">爱心值: ' + feat.value.toFixed(2) + '</div>'
-                                
+                                    '<div style="margin-bottom: 15px; border:1px solid #fff; border-radius: 4px;color: #fff; width: 150px; text-align: center;">爱心值: ' + feat.value.toFixed(2) + '</div>'
+
                             }));
                         }
 
                     });
-          
-    })},
-                    
+
+                })
+        },
+
     },
-    };
+};
 </script>
 
 <style scoped>
