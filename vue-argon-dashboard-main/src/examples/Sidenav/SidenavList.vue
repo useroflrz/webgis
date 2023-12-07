@@ -27,7 +27,7 @@
       </li>
       <li class="nav-item">
         <sidenav-item url="/virtual-reality" :class="getRoute() === 'virtual-reality' ? 'active' : ''" :navText="this.$store.state.isRTL ? 'الواقع الافتراضي' : '地图视角'
-        ">
+          ">
           <template v-slot:icon>
             <i class="ni ni-app text-info text-sm opacity-10"></i>
           </template>
@@ -40,7 +40,7 @@
           </template>
         </sidenav-item>
       </li> -->
-      <li class="mt-3 nav-item">
+      <!-- <li class="mt-3 nav-item">
         <h6 v-if="this.$store.state.isRTL" class="text-xs ps-4 text-uppercase font-weight-bolder opacity-6"
           :class="this.$store.state.isRTL ? 'me-4' : 'ms-2'">
           صفحات المرافق
@@ -49,7 +49,7 @@
           :class="this.$store.state.isRTL ? 'me-4' : 'ms-2'">
           ACCOUNT PAGES
         </h6>
-      </li>
+      </li> -->
       <li class="nav-item">
         <sidenav-item url="/profile" :class="getRoute() === 'profile' ? 'active' : ''"
           :navText="this.$store.state.isRTL ? 'حساب تعريفي' : '个人信息'">
