@@ -7,6 +7,7 @@
 <script>
 import AMapLoader from "@amap/amap-jsapi-loader";
 
+
 var MAP1 = null;
 window._AMapSecurityConfig = {
     securityJsCode: "49589548a3691130b640aeeee854bca2",
@@ -35,7 +36,6 @@ export default {
                     this.map = new AMap.Map("container", {
                         // 设置地图容器id
                         viewMode: "3D", // 是否为3D地图模式
-                        zooms: [3, 10],
                         zoom: 4, // 初始化地图级别
                         center: [116.397428, 39.90923], // 初始化地图中心点位置
                         pitch: 40,
@@ -77,9 +77,9 @@ export default {
                             1: '#D04343',
                         },
                         value: function (index, feature) {
-                            // return feature.properties.avg;
-                            var value = feature.properties.mom.slice(0, -1);
-                            return value + 10 * Math.random();
+                            return feature.properties.avg;
+                            // var value = feature.properties.mom.slice(0, -1);
+                            // return value + 10 * Math.random();
                         },
                         // min: -100,
                         // max: 100,
@@ -110,6 +110,7 @@ export default {
                         });
                     });
 
+
                     MAP1 = this.map;
 
                     MAP1.on('click', function (e) {
@@ -129,6 +130,7 @@ export default {
 
                 })
         },
+
 
     },
 };

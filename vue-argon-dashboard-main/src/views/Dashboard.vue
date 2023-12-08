@@ -32,7 +32,7 @@
             </div>
           </div>
           <div class="col-lg-5">
-            <MapContainer />
+            <Carousel />
           </div>
         </div>
         <div class="row mt-4">
@@ -93,7 +93,7 @@
 <script>
 import Card from "@/examples/Cards/Card.vue";
 import GradientLineChart from "@/examples/Charts/GradientLineChart.vue";
-import MapContainer from "./components/MapContainer.vue";
+import Carousel from "./components/Carousel.vue";
 import CategoriesCard from "./components/CategoriesCard.vue";
 
 
@@ -167,7 +167,7 @@ export default {
   components: {
     Card,
     GradientLineChart,
-    MapContainer,
+    Carousel,
     CategoriesCard,
   },
 };
