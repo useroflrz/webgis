@@ -111,7 +111,7 @@ export default {
           iconBackground: "bg-gradient-primary",
         },
         users: {
-          title: "新增爱心用户数",
+          title: "新增老人用户数",
           value: "2,300",
           percentage: "+3%",
           iconClass: "ni ni-world",

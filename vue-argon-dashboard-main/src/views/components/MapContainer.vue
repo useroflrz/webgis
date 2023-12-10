@@ -106,7 +106,7 @@ export default {
                             // 开启随机动画
                             transform: 1000,
                             random: true,
-                            delay: 5000,
+                            delay: 3000,
                         });
                     });
 
@@ -129,6 +129,8 @@ export default {
                     });
 
                 })
+
+
         },
 
 
