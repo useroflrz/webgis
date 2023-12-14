@@ -1,0 +1,27 @@
+<template>
+  <div>
+    <div id="container" style="height: 400px;"></div>
+  </div>
+</template>
+
+<script>
+export default {
+  mounted() {
+    this.initMap();
+  },
+  methods: {
+    initMap() {
+      const map = new AMap.Map('container', {
+        zoom: 13,
+        center: [117.397428, 39.90923]
+      });
+    },
+  },
+};
+</script>
+
+<style>
+#container {
+  height: 400px;
+}
+</style>

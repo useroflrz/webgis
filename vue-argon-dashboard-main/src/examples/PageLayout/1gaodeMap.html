@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css" />
+    <script src="http://cache.amap.com/lbs/static/es5.min.js"></script>
+    <script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
+
+
+    <script type="text/javascript">
+        window._AMapSecurityConfig = {
+            securityJsCode: 'c7ed917cbe79e8ee659dc8b19169c42f',
+        }
+    </script>
+    <script type="text/javascript"
+        src="https://webapi.amap.com/maps?v=1.4.15&key=96c356b5ee3e84cdee85e40463050ca9"></script>
+</head>
+
+<body>
+    <div id="container"></div>
+
+    <script>
+        var map = new AMap.Map('container', {
+            zoom: 13,
+            center: [117.397428, 39.90923]
+        });
+
+    </script>
+</body>
+
+</html>

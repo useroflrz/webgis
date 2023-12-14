@@ -26,6 +26,14 @@
         </sidenav-item>
       </li>
       <li class="nav-item">
+        <sidenav-item url="/mapversion" :class="getRoute() === 'tables' ? 'active' : ''"
+          :navText="this.$store.state.isRTL ? 'الجداول' : '地图'">
+          <template v-slot:icon>
+            <i class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"></i>
+          </template>
+        </sidenav-item>
+      </li>
+      <li class="nav-item">
         <sidenav-item url="/virtual-reality" :class="getRoute() === 'virtual-reality' ? 'active' : ''" :navText="this.$store.state.isRTL ? 'الواقع الافتراضي' : '地图视角'
           ">
           <template v-slot:icon>
@@ -80,6 +88,9 @@
     <sidenav-card :class="cardBg" textPrimary="Need Help?" textSecondary="Please check our docs" />
   </div>
 </template>
+
+
+
 <script>
 import SidenavItem from "./SidenavItem.vue";
 import SidenavCard from "./SidenavCard.vue";
