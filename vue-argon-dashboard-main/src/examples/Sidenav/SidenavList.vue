@@ -26,7 +26,7 @@
         </sidenav-item>
       </li>
       <li class="nav-item">
-        <sidenav-item url="/mapversion" :class="getRoute() === 'tables' ? 'active' : ''"
+        <sidenav-item url="/mapversion" :class="getRoute() === 'mapversion' ? 'active' : ''"
           :navText="this.$store.state.isRTL ? 'الجداول' : '地图'">
           <template v-slot:icon>
             <i class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"></i>

@@ -46,6 +46,7 @@
 </template>
 
 <script>
+
 import setNavPills from "@/assets/js/nav-pills.js";
 
 export default {
