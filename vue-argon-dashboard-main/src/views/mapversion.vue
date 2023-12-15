@@ -10,6 +10,8 @@
 import pmap_container from './components/puremap.vue';
 
 export default {
+  name: "mapver",
+  
   components: {
     pmap_container
   },
