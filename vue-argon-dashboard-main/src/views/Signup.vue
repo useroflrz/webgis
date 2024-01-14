@@ -18,7 +18,7 @@
             <h1 class="text-white mb-2 mt-5">Welcome!</h1>
             <p
               class="text-lead text-white"
-            >Use these awesome forms to login or create new account in your project for free.</p>
+            >欢迎您使用我们的产品！</p>
           </div>
         </div>
       </div>
@@ -28,7 +28,7 @@
         <div class="col-xl-4 col-lg-5 col-md-7 mx-auto">
           <div class="card z-index-0">
             <div class="card-header text-center pt-4">
-              <h5>Register with</h5>
+              <h5>可使用以下方式注册</h5>
             </div>
             <div class="row px-xl-5 px-sm-4 px-3">
               <div class="col-3 ms-auto px-1">
@@ -97,27 +97,27 @@
             </div>
             <div class="card-body">
               <form role="form">
-                <argon-input type="text" placeholder="Name" aria-label="Name" />
-                <argon-input type="email" placeholder="Email" aria-label="Email" />
-                <argon-input type="password" placeholder="Password" aria-label="Password" />
+                <argon-input type="text" placeholder="昵称" aria-label="Name" />
+                <argon-input type="email" placeholder="账号" aria-label="Email" />
+                <argon-input type="password" placeholder="密码" aria-label="Password" />
                 <argon-checkbox checked>
                   <label class="form-check-label" for="flexCheckDefault">
-                    I agree the
+                    我同意
                     <a
                       href="javascript:;"
                       class="text-dark font-weight-bolder"
-                    >Terms and Conditions</a>
+                    >使用条款</a>
                   </label>
                 </argon-checkbox>
                 <div class="text-center">
-                  <argon-button fullWidth color="dark" variant="gradient" class="my-4 mb-2">Sign up</argon-button>
+                  <argon-button fullWidth color="dark" variant="gradient" class="my-4 mb-2">注册</argon-button>
                 </div>
                 <p class="text-sm mt-3 mb-0">
-                  Already have an account?
+                  已有账号?
                   <a
                     href="javascript:;"
                     class="text-dark font-weight-bolder"
-                  >Sign in</a>
+                  >登录</a>
                 </p>
               </form>
             </div>

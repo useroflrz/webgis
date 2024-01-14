@@ -76,7 +76,7 @@
       </li>
       <li class="nav-item">
         <sidenav-item url="/signup" :class="getRoute() === 'signup' ? 'active' : ''"
-          :navText="this.$store.state.isRTL ? 'اشتراك' : '注销'">
+          :navText="this.$store.state.isRTL ? 'اشتراك' : '注册'">
           <template v-slot:icon>
             <i class="ni ni-collection text-info text-sm opacity-10"></i>
           </template>

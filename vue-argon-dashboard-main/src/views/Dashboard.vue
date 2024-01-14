@@ -90,6 +90,8 @@
     </div>
   </div>
 </template>
+
+
 <script>
 import Card from "@/examples/Cards/Card.vue";
 import GradientLineChart from "@/examples/Charts/GradientLineChart.vue";
@@ -164,6 +166,7 @@ export default {
       },
     };
   },
+
   components: {
     Card,
     GradientLineChart,

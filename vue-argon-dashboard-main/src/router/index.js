@@ -27,7 +27,7 @@ const routes = [
   },
   {
     path: "/billing",
-    name: "Billing",
+    name: "用户名单",
     component: Billing,
   },
   {
@@ -37,7 +37,7 @@ const routes = [
   },
   {
     path: "/mapversion",
-    name: "mapversion",
+    name: "地图",
     component: mapver,
   },
   {
