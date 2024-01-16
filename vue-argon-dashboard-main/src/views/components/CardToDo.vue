@@ -2,14 +2,14 @@
   <div class="card bg-gradient-dark move-on-hover">
     <div class="card-body">
       <div class="d-flex">
-        <h5 class="mb-0 text-white">To Do</h5>
+        <h5 class="mb-0 text-white">待办清单</h5>
         <div class="ms-auto">
           <h1 class="mb-0 text-white text-end mt-n2">7</h1>
-          <p class="mb-0 text-sm text-white">items</p>
+          <p class="mb-0 text-sm text-white">项</p>
         </div>
       </div>
-      <p class="mb-0 text-white">Shopping</p>
-      <p class="mb-0 text-white">Meeting</p>
+      <p class="mb-0 text-white">服务申请待处理</p>
+      <p class="mb-0 text-white">会议</p>
     </div>
     <a
       href="javascript:;"

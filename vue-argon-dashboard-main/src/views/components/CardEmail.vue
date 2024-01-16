@@ -2,7 +2,7 @@
   <div class="mt-4 card move-on-hover">
     <div class="card-body">
       <div class="d-flex">
-        <p class="mb-0">Emails (21)</p>
+        <p class="mb-0">未读邮件(21)</p>
         <a
           href="javascript:;"
           class="ms-auto"
@@ -10,7 +10,7 @@
           data-bs-placement="top"
           title="Check your emails"
         >
-          Check
+          查看
         </a>
       </div>
     </div>

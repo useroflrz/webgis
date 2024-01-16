@@ -4,24 +4,24 @@
       <div class="d-flex">
         <h6 class="mb-0 me-3">08:00</h6>
         <h6 class="mb-0">
-          Synk up with Mark
-          <small class="text-secondary font-weight-normal">Hangouts</small>
+          组会
+          <small class="text-secondary font-weight-normal">二楼平台</small>
         </h6>
       </div>
       <hr class="horizontal dark" />
       <div class="d-flex">
         <h6 class="mb-0 me-3">09:30</h6>
         <h6 class="mb-0">
-          Gym <br />
-          <small class="text-secondary font-weight-normal">World Class</small>
+          日常任务 <br />
+          <small class="text-secondary font-weight-normal">办公室</small>
         </h6>
       </div>
       <hr class="horizontal dark" />
       <div class="d-flex">
         <h6 class="mb-0 me-3">11:00</h6>
         <h6 class="mb-0">
-          Design Review<br />
-          <small class="text-secondary font-weight-normal">Zoom</small>
+          设计会议<br />
+          <small class="text-secondary font-weight-normal">三楼会议室</small>
         </h6>
       </div>
     </div>

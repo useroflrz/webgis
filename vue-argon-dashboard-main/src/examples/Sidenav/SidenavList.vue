@@ -2,65 +2,47 @@
   <div class="collapse navbar-collapse w-auto h-auto h-100" id="sidenav-collapse-main">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <sidenav-item url="/dashboard-default" :class="getRoute() === 'dashboard-default' ? 'active' : ''"
-          :navText="this.$store.state.isRTL ? 'لوحة القيادة' : '首页'">
+        <sidenav-item url="/dashboard-default" :class="''"
+          :navText="'首页'">
           <template v-slot:icon>
             <i class="ni ni-tv-2 text-primary text-sm opacity-10"></i>
           </template>
         </sidenav-item>
       </li>
       <li class="nav-item">
-        <sidenav-item url="/tables" :class="getRoute() === 'tables' ? 'active' : ''"
-          :navText="this.$store.state.isRTL ? 'الجداول' : '管理员'">
+        <sidenav-item url="/tables" :class="''"
+          :navText="'管理员'">
           <template v-slot:icon>
             <i class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"></i>
           </template>
         </sidenav-item>
       </li>
       <li class="nav-item">
-        <sidenav-item url="/billing" :class="getRoute() === 'billing' ? 'active' : ''"
-          :navText="this.$store.state.isRTL ? 'الفواتیر' : '数据表'">
+        <sidenav-item url="/billing" :class="''"
+          :navText="'数据表'">
           <template v-slot:icon>
             <i class="ni ni-credit-card text-success text-sm opacity-10"></i>
           </template>
         </sidenav-item>
       </li>
       <li class="nav-item">
-        <sidenav-item url="/mapversion" :class="getRoute() === 'mapversion' ? 'active' : ''"
-          :navText="this.$store.state.isRTL ? 'الجداول' : '地图'">
+        <sidenav-item url="/mapversion" :class="''"
+          :navText="'地图'">
           <template v-slot:icon>
             <i class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"></i>
           </template>
         </sidenav-item>
       </li>
       <li class="nav-item">
-        <sidenav-item url="/virtual-reality" :class="getRoute() === 'virtual-reality' ? 'active' : ''" :navText="this.$store.state.isRTL ? 'الواقع الافتراضي' : '地图视角'
-          ">
+        <sidenav-item url="/virtual-reality" :class="''" :navText="'办公空间'">
           <template v-slot:icon>
             <i class="ni ni-app text-info text-sm opacity-10"></i>
           </template>
         </sidenav-item>
       </li>
-      <!-- <li class="nav-item">
-        <sidenav-item url="/rtl-page" :class="getRoute() === 'rtl-page' ? 'active' : ''" navText="RTL">
-          <template v-slot:icon>
-            <i class="ni ni-world-2 text-danger text-sm opacity-10"></i>
-          </template>
-        </sidenav-item>
-      </li> -->
-      <!-- <li class="mt-3 nav-item">
-        <h6 v-if="this.$store.state.isRTL" class="text-xs ps-4 text-uppercase font-weight-bolder opacity-6"
-          :class="this.$store.state.isRTL ? 'me-4' : 'ms-2'">
-          صفحات المرافق
-        </h6>
-        <h6 v-else class="text-xs ps-4 text-uppercase font-weight-bolder opacity-6"
-          :class="this.$store.state.isRTL ? 'me-4' : 'ms-2'">
-          ACCOUNT PAGES
-        </h6>
-      </li> -->
       <li class="nav-item">
-        <sidenav-item url="/profile" :class="getRoute() === 'profile' ? 'active' : ''"
-          :navText="this.$store.state.isRTL ? 'حساب تعريفي' : '个人信息'">
+        <sidenav-item url="/profile" :class="''"
+          :navText="'个人信息'">
           <template v-slot:icon>
             <i class="ni ni-single-02 text-dark text-sm opacity-10"></i>
           </template>

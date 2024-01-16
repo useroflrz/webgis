@@ -23,6 +23,5 @@ export default {
 #map_ctner {
   height: 700px;
   width: 1350px;
-
 }
 </style>

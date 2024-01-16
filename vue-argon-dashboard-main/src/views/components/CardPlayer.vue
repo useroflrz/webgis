@@ -8,8 +8,8 @@
         "
       ></div>
       <div class="card-body">
-        <h5 class="mb-0 text-white">Some Kind Of Blues</h5>
-        <p class="text-sm text-white">Deftones</p>
+        <h5 class="mb-0 text-white">恭喜你发财</h5>
+        <p class="text-sm text-white">刘德华</p>
         <div class="mt-5 d-flex">
           <button
             class="p-2 mb-0 btn btn-outline-white rounded-circle"

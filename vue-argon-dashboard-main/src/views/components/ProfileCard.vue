@@ -31,8 +31,8 @@
               <span class="text-sm opacity-8">Friends</span>
             </div> -->
             <div class="d-grid text-center mx-4">
-              <span class="text-lg font-weight-bolder">10h</span>
-              <span class="text-sm opacity-8">服务时长</span>
+              <span class="text-lg font-weight-bolder">LRZ_TEAM</span>
+              <span class="text-sm opacity-8">管理员</span>
             </div>
             <!-- <div class="d-grid text-center">
               <span class="text-lg font-weight-bolder">89</span>

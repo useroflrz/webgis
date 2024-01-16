@@ -4,15 +4,15 @@
       <h6 class="mb-0">{{ cardTitle }}</h6>
     </div>
     <div class="p-3 card-body">
-      <ul class="list-group" :class="this.$store.state.isRTL ? 'pe-0' : ''">
+      <ul class="list-group" :class="''">
         <li
           class="mb-2 border-0 list-group-item d-flex justify-content-between border-radius-lg"
-          :class="this.$store.state.isRTL ? 'pe-0' : 'ps-0'"
+          :class="'ps-0'"
         >
           <div class="d-flex align-items-center">
             <div
               class="text-center shadow icon icon-shape icon-sm bg-gradient-dark"
-              :class="this.$store.state.isRTL ? 'ms-3' : 'me-3'"
+              :class="'me-3'"
             >
               <i class="ni ni-mobile-button text-white opacity-10"></i>
             </div>
@@ -34,12 +34,12 @@
         </li>
         <li
           class="mb-2 border-0 list-group-item d-flex justify-content-between border-radius-lg"
-          :class="this.$store.state.isRTL ? 'pe-0' : 'ps-0'"
+          :class="'ps-0'"
         >
           <div class="d-flex align-items-center">
             <div
               class="text-center shadow icon icon-shape icon-sm bg-gradient-dark"
-              :class="this.$store.state.isRTL ? 'ms-3' : 'me-3'"
+              :class="'me-3'"
             >
               <i class="ni ni-tag text-white opacity-10"></i>
             </div>
@@ -61,12 +61,12 @@
         </li>
         <li
           class="border-0 list-group-item d-flex justify-content-between border-radius-lg"
-          :class="this.$store.state.isRTL ? 'pe-0' : 'ps-0'"
+          :class="'ps-0'"
         >
           <div class="d-flex align-items-center">
             <div
               class="text-center shadow icon icon-shape icon-sm bg-gradient-dark"
-              :class="this.$store.state.isRTL ? 'ms-3' : 'me-3'"
+              :class="'me-3'"
             >
               <i class="ni ni-box-2 text-white opacity-10"></i>
             </div>
@@ -88,12 +88,12 @@
         </li>
         <li
           class="border-0 list-group-item d-flex justify-content-between border-radius-lg"
-          :class="this.$store.state.isRTL ? 'pe-0' : 'ps-0'"
+          :class="'ps-0'"
         >
           <div class="d-flex align-items-center">
             <div
               class="text-center shadow icon icon-shape icon-sm bg-gradient-dark"
-              :class="this.$store.state.isRTL ? 'ms-3' : 'me-3'"
+              :class="'me-3'"
             >
               <i class="ni ni-satisfied text-white opacity-10"></i>
             </div>
@@ -121,35 +121,35 @@ export default {
   props: {
     cardTitle: {
       type: String,
-      default: "Categories",
+      default: "使用反馈",
     },
     title: {
       type: String,
-      default: "Devices",
+      default: "需求对接量",
     },
     title2: {
       type: String,
-      default: "Tickets",
+      default: "服务点击量",
     },
     title3: {
       type: String,
-      default: "Error logs",
+      default: "投诉",
     },
     title4: {
       type: String,
-      default: "Happy Users",
+      default: "好评",
     },
     titleDesc: {
       type: String,
-      default: "250 in stock",
+      default: "实时需求: 250",
     },
     titleDesc2: {
       type: String,
-      default: "346+ sold",
+      default: "实时服务: 146",
     },
     title2Desc: {
       type: String,
-      default: "123 closed",
+      default: "2500",
     },
     title4Desc: {
       type: String,
@@ -157,15 +157,15 @@ export default {
     },
     title2Desc2: {
       type: String,
-      default: "15 open",
+      default: "+300",
     },
     title3Desc: {
       type: String,
-      default: "1 is active",
+      default: "已处理: 40",
     },
     title3Desc2: {
       type: String,
-      default: "40 closed",
+      default: "尚未处理: 1",
     },
   },
 };

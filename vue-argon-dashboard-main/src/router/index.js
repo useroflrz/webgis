@@ -32,7 +32,7 @@ const routes = [
   },
   {
     path: "/virtual-reality",
-    name: "Virtual Reality",
+    name: "virtual-reality",
     component: VirtualReality,
   },
   {

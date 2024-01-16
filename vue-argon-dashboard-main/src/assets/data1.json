@@ -1,0 +1,202 @@
+[
+    {
+        "coordinates": [
+            114.2639,
+            31.1014
+        ],
+        "address": "四川省成都市锦江区春熙路",
+        "event_name": "购物狂欢节",
+        "event_time": "2024-03-10 15:00",
+        "event_attendees": 80
+    },
+    {
+        "coordinates": [
+            114.057864,
+            22.543096
+        ],
+        "address": "广东省深圳市罗湖区东门步行街",
+        "event_name": "美食节",
+        "event_time": "2024-04-20 18:30",
+        "event_attendees": 120
+    },
+    {
+        "coordinates": [
+            108.951865,
+            34.264982
+        ],
+        "address": "陕西省西安市大雁塔",
+        "event_name": "文化展览",
+        "event_time": "2024-05-05 11:00",
+        "event_attendees": 60
+    },
+    {
+        "coordinates": [
+            113.264359,
+            23.129080
+        ],
+        "address": "广东省广州市珠江夜游",
+        "event_name": "夜游活动",
+        "event_time": "2024-06-15 20:00",
+        "event_attendees": 70
+    },
+    {
+        "coordinates": [
+            116.407396,
+            39.904199
+        ],
+        "address": "北京市东城区故宫",
+        "event_name": "历史文化讲座",
+        "event_time": "2024-07-08 14:00",
+        "event_attendees": 40
+    },
+    {
+        "coordinates": [
+            121.473701,
+            31.230416
+        ],
+        "address": "上海市浦东新区东方明珠塔",
+        "event_name": "观光游览",
+        "event_time": "2024-08-20 10:30",
+        "event_attendees": 90
+    },
+    {
+        "coordinates": [
+            108.326218,
+            22.806493
+        ],
+        "address": "广西壮族自治区南宁市青秀山",
+        "event_name": "登山活动",
+        "event_time": "2024-09-05 09:00",
+        "event_attendees": 50
+    },
+    {
+        "coordinates": [
+            121.5654,
+            38.8829
+        ],
+        "address": "辽宁省大连市星海公园",
+        "event_name": "音乐演出",
+        "event_time": "2024-10-15 19:30",
+        "event_attendees": 100
+    },
+    {
+        "coordinates": [
+            113.5500,
+            23.1067
+        ],
+        "address": "广东省广州市广州塔",
+        "event_name": "观景体验",
+        "event_time": "2024-11-10 16:00",
+        "event_attendees": 60
+    },
+    {
+        "coordinates": [
+            106.6297,
+            26.7117
+        ],
+        "address": "贵州省贵阳市花溪公园",
+        "event_name": "户外野餐",
+        "event_time": "2024-12-05 12:00",
+        "event_attendees": 80
+    },
+    {
+        "coordinates": [
+            116.397499,
+            39.908722
+        ],
+        "address": "北京市东城区天安门广场",
+        "event_name": "新年倒计时",
+        "event_time": "2025-01-01 23:59",
+        "event_attendees": 1000
+    },
+    {
+        "coordinates": [
+            113.265535,
+            23.117679
+        ],
+        "address": "广东省广州市广州塔",
+        "event_name": "灯光秀",
+        "event_time": "2025-02-15 19:00",
+        "event_attendees": 200
+    },
+    {
+        "coordinates": [
+            108.948021,
+            34.263161
+        ],
+        "address": "陕西省西安市钟楼",
+        "event_name": "古城夜市",
+        "event_time": "2025-03-20 18:00",
+        "event_attendees": 300
+    },
+    {
+        "coordinates": [
+            113.553989,
+            22.201675
+        ],
+        "address": "广东省珠海市横琴岛",
+        "event_name": "海滩派对",
+        "event_time": "2025-04-10 16:00",
+        "event_attendees": 150
+    },
+    {
+        "coordinates": [
+            121.473704,
+            31.225344
+        ],
+        "address": "上海市黄浦区外滩",
+        "event_name": "夜间摄影",
+        "event_time": "2025-05-05 20:30",
+        "event_attendees": 80
+    },
+    {
+        "coordinates": [
+            116.191407,
+            39.938869
+        ],
+        "address": "北京市海淀区颐和园",
+        "event_name": "赏花活动",
+        "event_time": "2025-06-15 10:00",
+        "event_attendees": 200
+    },
+    {
+        "coordinates": [
+            113.261227,
+            23.130914
+        ],
+        "address": "广东省广州市越秀山",
+        "event_name": "健步走",
+        "event_time": "2025-07-08 08:30",
+        "event_attendees": 100
+    },
+    {
+        "coordinates": [
+            121.506377,
+            31.221517
+        ],
+        "address": "上海市静安区中山公园",
+        "event_name": "音乐会",
+        "event_time": "2025-08-20 19:00",
+        "event_attendees": 500
+    },
+    {
+        "coordinates": [
+            108.953098,
+            34.246479
+        ],
+        "address": "陕西省西安市大明宫遗址公园",
+        "event_name": "历史探索",
+        "event_time": "2025-09-05 14:00",
+        "event_attendees": 80
+    },
+    {
+        "coordinates": [
+            114.064542,
+            22.548819
+        ],
+        "address": "广东省深圳市欢乐谷",
+        "event_name": "游乐园嘉年华",
+        "event_time": "2025-10-10 10:00",
+        "event_attendees": 300
+    }
+]

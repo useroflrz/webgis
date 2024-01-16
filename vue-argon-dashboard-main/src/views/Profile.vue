@@ -171,13 +171,13 @@
         </div>
       </div>
     </div>
-    <div id="mainChart" style="width: 600px;height:400px;"></div>
+    <!-- <div id="mainChart" style="width: 600px;height:400px;"></div> -->
   </main>
 </template>
 
 
 <script>
-import * as echarts from 'echarts';
+// import * as echarts from 'echarts';
 import setNavPills from "@/assets/js/nav-pills.js";
 import setTooltip from "@/assets/js/tooltip.js";
 import ProfileCard from "./components/ProfileCard.vue";
@@ -196,63 +196,63 @@ export default {
   components: { ProfileCard, ArgonInput, ArgonButton },
 
   methods: {
-    initECharts() {
-      // 获取ECharts图表容器
-      const chartContainer = document.getElementById('mainChart');
+  //   initECharts() {
+  //     // 获取ECharts图表容器
+  //     const chartContainer = document.getElementById('mainChart');
 
-      // 初始化ECharts图表
-      const myChart = echarts.init(chartContainer);
+  //     // 初始化ECharts图表
+  //     const myChart = echarts.init(chartContainer);
 
-      // 设置图表选项
-      const option = {
-        title: {
-          text: 'World Population',
-        },
-        tooltip: {
-          trigger: 'axis',
-          axisPointer: {
-            type: 'shadow',
-          },
-        },
-        legend: {},
-        grid: {
-          left: '3%',
-          right: '4%',
-          bottom: '3%',
-          containLabel: true,
-        },
-        xAxis: {
-          type: 'value',
-          boundaryGap: [0, 0.01],
-        },
-        yAxis: {
-          type: 'category',
-          data: ['Brazil', 'Indonesia', 'USA', 'India', 'China', 'World'],
-        },
-        series: [
-          {
-            name: '2011',
-            type: 'bar',
-            data: [18203, 23489, 29034, 104970, 131744, 630230],
-          },
-          {
-            name: '2012',
-            type: 'bar',
-            data: [19325, 23438, 31000, 121594, 134141, 681807],
-          },
-        ],
-      };
+  //     // 设置图表选项
+  //     const option = {
+  //       title: {
+  //         text: 'World Population',
+  //       },
+  //       tooltip: {
+  //         trigger: 'axis',
+  //         axisPointer: {
+  //           type: 'shadow',
+  //         },
+  //       },
+  //       legend: {},
+  //       grid: {
+  //         left: '3%',
+  //         right: '4%',
+  //         bottom: '3%',
+  //         containLabel: true,
+  //       },
+  //       xAxis: {
+  //         type: 'value',
+  //         boundaryGap: [0, 0.01],
+  //       },
+  //       yAxis: {
+  //         type: 'category',
+  //         data: ['Brazil', 'Indonesia', 'USA', 'India', 'China', 'World'],
+  //       },
+  //       series: [
+  //         {
+  //           name: '2011',
+  //           type: 'bar',
+  //           data: [18203, 23489, 29034, 104970, 131744, 630230],
+  //         },
+  //         {
+  //           name: '2012',
+  //           type: 'bar',
+  //           data: [19325, 23438, 31000, 121594, 134141, 681807],
+  //         },
+  //       ],
+  //     };
 
-      // 将选项应用到图表
-      myChart.setOption(option);
-    },
+  //     // 将选项应用到图表
+  //     myChart.setOption(option);
+  //   },
   },
 
   mounted() {
     this.$store.state.isAbsolute = true;
     setNavPills();
     setTooltip();
-    this.initECharts(); // 初始化 ECharts 图表
+    // this.initECharts(); // 初始化 ECharts 图表
   },
   beforeMount() {
     this.$store.state.imageLayout = "profile-overview";

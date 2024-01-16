@@ -14,12 +14,6 @@
                 </ul>
             </div>
 
-
-
-            <div v-if="selectedOption === 'div2'">
-                <h3>选项2的内容</h3>
-                <!-- 添加选项2的具体内容 -->
-            </div>
         </div>
         <div v-if="selectedOption === 'div1'" class="custom-component">
             <div class="container">
@@ -51,29 +45,30 @@
                 </div>
             </div>
         </div>
+        <div v-if="selectedOption === 'div2'" id="tishi">
+            <div class="text-center">
+                <button id="geo" type="button" class="btn btn-primary" @click="delemarker">点我再点击地图上的活动点</button>
+            </div>
+        </div>
     </div>
 </template>
 
 <script>
 import AMapLoader from "@amap/amap-jsapi-loader";
 
-window._AMapSecurityConfig = {
-    securityJsCode: "49589548a3691130b640aeeee854bca2",
-};
-
-// var that = this;
 export default {
     name: "pmap_container",
 
     data() {
         return {
             map: null,
-            markers: [],
+            makerList: [],
+            geodata: [],
             selectedOption: '',
             address: null,
-            // markersPosition: [],
-            // inputValue: "", // 用于绑定输入框的值
-            // editingIndex: -1, // 默认为-1，表示没有点被编辑
+            markersPosition: [],
+            infoWindowContent: null,
+
         };
     },
 
@@ -88,9 +83,11 @@ export default {
         showDiv(option) {
             this.selectedOption = option;
         },
+
         initAMap() {
             AMapLoader.load({
                 key: "b8f1d1072c8346e4a93a5e901a6811fb",
+                securityJsCode: "49589548a3691130b640aeeee854bca2",
                 version: "2.0",
                 plugins: ["AMap.Geocoder"],
             })
@@ -98,71 +95,132 @@ export default {
                     this.map = new AMap.Map("pmap_container", {
                         zoom: 4,
                     });
+
+                    this.infoWindowContent = `
+                <div class="container" style="max-height: 300px; overflow-y: auto;">
+                    <div class="card">
+                    <div class="card-body">
+                        <form>
+                        <div class="mb-3">
+                            <label for="activityName" class="form-label">活动名</label>
+                            <input type="text" class="form-control" id="activityName" placeholder="请输入活动名" value="${markerInfo.event_name}">
+                        </div>
+                        <div class="mb-3">
+                            <label for="activityCount" class="form-label">活动人数</label>
+                            <input type="number" class="form-control" id="activityCount" placeholder="请输入活动人数" value="${markerInfo.event_attendees}">
+                        </div>
+                        <div class="mb-3">
+                            <label for="activityTime" class="form-label">活动时间</label>
+                            <input type="text" class="form-control" id="activityTime" placeholder="请输入活动时间" value="${markerInfo.event_time}">
+                        </div>
+                        </form>
+                    </div>
+                    </div>
+                </div>
+                `;
                 });
+
+            this.readJSONFile()
         },
 
-        // setMapMarker(e) {
+        readJSONFile() {
+            const url = 'http://127.0.0.1:5500/src/assets/data1.json';
+            $.ajax({
+                method: "GET",
+                url: url,
+                dataType: "json",
 
+                success: (data) => {
+                    // 在成功读取 JSON 文件后，可以在这里处理数据
+                    console.log(data);
 
-        //     var title;
-        //     var content = [];
+                    // 可以通过 data.geodata 访问坐标数组
+                    for (let i = 0; i < data.length; i++) {
+                        this.geodata.push(data[i]);
+                    }
+                    console.log(this.geodata);
 
-        //     geocoder.getLocation(address, (status, result) => {
-        //         if (status === "complete" && result.geocodes.length) {
-        //             var lnglat = result.geocodes[0].location;
-        //             document.getElementById('lnglat').value = lnglat;
-        //             marker.setPosition(lnglat);
-        //             map.add(marker);
-        //             map.setFitView(marker);
+                    this.setMapMarker()
+                },
+                error: function (xhr, status, error) {
 
-        //             title = `${address}`,
-        //                 content = [];   //内容
-        //             // infoWindow.open(this.map, marker.getPosition());
-        //         } else {
-        //             log.error('根据地址查询位置失败');
-        //         }
-        //     });
+                    // 处理读取 JSON 文件失败的情况
+                    console.log("读取 JSON 文件失败：" + error);
+                }
 
+            });
+        },
 
+        setMapMarker() {
+            for (let i = 0; i < this.geodata.length; i++) {
+                // 创建Marker
+                var marker = new AMap.Marker({
+                    map: this.map,
+                    zIndex: 9,
+                    offset: new AMap.Pixel(-13, -30),
+                    position: this.geodata[i].coordinates
+                });
 
-        //     var infoWindow = new AMap.InfoWindow({
-        //         isCustom: true,
-        //         content:
-        //             this.createInfoWindow(
-        //                 title,
-        //                 content.join("<br/>"),
-        //             ),
-        //         // offset: new AMap.Pixel(16, -35),
-        //     });
+                // 创建InfoWindow
+                var infoWindow = new AMap.InfoWindow({
+                    isCustom: true,
+                    content: this.infoWindowContent, // 初始内容为模板字符串
+                    offset: new AMap.Pixel(16, -45)
+                });
 
-        //     var marker = new AMap.Marker({
-        //         icon: "//a.amap.com/jsapi_demos/static/demo-center/icons/poi-marker-default.png",
-        //         map: this.map,
-        //         position: this.markersPosition,
-        //         offset: new AMap.Pixel(-20, -50),
-        //     });
+                // Marker点击事件
+                marker.on('click', (e) => {
+                    // 获取当前Marker的信息
+                    var markerInfo = this.geodata[i];
 
-        //     this.markers.push(marker);
-        //     this.editingIndex = this.markers.length - 1;
+                    // 构建动态内容
+                    var content = `
+        <div class="container" style="max-height: 300px; overflow-y: auto;">
+          <div class="card">
+            <div class="card-body">
+              <form>
+                <div class="mb-3">
+                  <label for="activityName" class="form-label">活动名</label>
+                  <input type="text" class="form-control" id="activityName" placeholder="请输入活动名" value="${markerInfo.event_name}">
+                </div>
+                <div class="mb-3">
+                  <label for="activityCount" class="form-label">活动人数</label>
+                  <input type="number" class="form-control" id="activityCount" placeholder="请输入活动人数" value="${markerInfo.event_attendees}">
+                </div>
+                <div class="mb-3">
+                  <label for="activityTime" class="form-label">活动时间</label>
+                  <input type="text" class="form-control" id="activityTime" placeholder="请输入活动时间" value="${markerInfo.event_time}">
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      `;
 
+                    // 更新InfoWindow的内容
+                    infoWindow.setContent(content);
 
+                    // 打开InfoWindow
+                    infoWindow.open(this.map, e.target.getPosition());
+                });
 
-        //     marker.on(marker, "click", () => {
-        //         infoWindow.open(this.map, marker.getPosition());
-        //     });
+                // 地图点击事件
+                this.map.on('click', () => {
+                    this.map.clearInfoWindow();
+                });
 
-        // },
+                // 触发Marker的点击事件
+                marker.emit('click', { target: marker });
 
+                this.makerList.push(marker);
+            }
+        },
 
         geoCode() {
             var geocoder = new AMap.Geocoder();
             var marker = new AMap.Marker({
-                icon: "//a.amap.com/jsapi_demos/static/demo-center/icons/poi-marker-default.png",
-                map: this.map,
-                position: this.markersPosition,
-                offset: new AMap.Pixel(-20, -50),
+                position: null
             });
-
             // infowidnow 的 innerHTML
             var infoWindowContent = `
                 <div class="container" style="max-height: 300px; overflow-y: auto;">
@@ -196,35 +254,29 @@ export default {
             });
 
             var address = this.address;
-            // var addresses = document.getElementById('address').textContent.trim().split('\n');
             var that = this;
             geocoder.getLocation(address, function (status, result) {
                 if (status === 'complete' && result.geocodes.length) {
-
-                    // for (var i = 0; i < result.geocodes.length; i += 1) {
-                    //     var marker = new AMap.Marker({
-                    //         position: result.geocodes[i].location
-                    //     });
-
-                    that.markers.push(marker);
-                    // }
                     var lnglat = result.geocodes[0].location
-                    document.getElementById('lnglat').value = lnglat;
-                    marker.setPosition(lnglat);
 
-                    // marker.content = '我是第' + (1) + '个Marker';
+                    // $("#llnglat").value = lnglat;
+                    document.getElementById('lnglat').value = lnglat;
+
+                    marker.setPosition(lnglat)
+                    that.map.add(marker)
+                    that.makerList.push(marker)
+
 
                     marker.on('click', (e) => {
                         // infoWindow.setContent(e.target.content);/
                         infoWindow.open(that.map, e.target.getPosition());
                     });
 
-                    that.map.on('click',()=>{
-                        that.map.clearInfoWindow();
-                    })
+
 
                     marker.emit('click', { target: marker });
-                } else {
+                }
+                else {
                     log.error('根据地址查询位置失败');
                 }
             });
@@ -238,68 +290,14 @@ export default {
             return true;
         },
 
+        delemarker() {
+            for (let i = 0; i < this.makerList.length; i++) {
+                this.makerList[i].on('click', (e) => {
+                    this.map.remove(this.makerList[i]);
+                })
+            }
 
-        // //自定义信息窗体
-        // createInfoWindow(title, content) {
-        //     let obj = {};
-        //     //info 为 信息窗体
-        //     var info = document.createElement("div");
-        //     info.className = "info";
-
-        //     //可以通过下面的方式修改自定义窗体的宽高
-        //     //info.style.width = "400px";
-        //     // 定义顶部标题
-        //     let top = document.createElement("div");
-        //     let titleD = document.createElement("div");
-        //     let closeX = document.createElement("img");
-        //     top.className = "info-top";
-        //     top.title = obj.name;
-        //     titleD.innerHTML = title;
-        //     closeX.src = "http://webapi.amap.com/images/close2.gif";
-        //     closeX.onclick = this.closeInfoWindow; //点击右上角的x可以关闭该信息窗体
-
-        //     top.appendChild(titleD);
-        //     top.appendChild(closeX);
-        //     info.appendChild(top); //信息窗体增加顶部的div
-
-        //     // 定义中部内容
-        //     var middle = document.createElement("div");
-        //     middle.className = "info-middle";
-        //     middle.style.backgroundColor = "white";
-        //     middle.innerHTML = content;
-        //     info.appendChild(middle); //信息窗体增加中部的div
-
-        //     let user = document.createElement("div");
-        //     user.className = "fillUsers";
-        //     user.innerHTML = "名称 ：";
-        //     let inputs = document.createElement("input");
-        //     inputs.placeholder = "请输入";
-        //     //edit
-        //     inputs.oninput = function () {
-        //         this.inputValue = inputs.value;
-        //         // 定义的是事件被触发后要做的事情
-        //     };
-        //     info.appendChild(user);
-        //     user.appendChild(inputs);
-
-        //     // 定义底部内容
-        //     var bottom = document.createElement("div");
-        //     bottom.className = "info-bottom";
-        //     bottom.style.position = "relative";
-        //     bottom.style.top = "0px";
-        //     bottom.style.margin = "0 auto";
-        //     var sharp = document.createElement("img");
-        //     sharp.src = "http://webapi.amap.com/images/sharp.png";
-        //     bottom.appendChild(sharp);
-        //     info.appendChild(bottom); //信息窗体增加底部的div
-
-        //     return info;
-        // },
-
-        // //关闭信息窗体
-        // closeInfoWindow() {
-        //     this.map.clearInfoWindow();
-        // },
+        }
 
     },
 };
@@ -321,6 +319,13 @@ export default {
 
 .btn {
     width: 10rem;
+}
+
+#tishi {
+    position: absolute;
+    bottom: 50px;
+    right: 40px;
+    z-index: 9;
 }
 
 .kj {
